@@ -1,4 +1,4 @@
-# For @TeleBotHelp
+# For @Macy_support
 """Check if your userbot is working."""
 import time
 from datetime import datetime
@@ -15,7 +15,7 @@ from telebot.telebotConfig import Config, Var
 CUSTOM_ALIVE = (
     Var.CUSTOM_ALIVE
     if Var.CUSTOM_ALIVE
-    else "Hey! I'm alive. All systems online and functioning normally!"
+    else "Hey! -- APUN JINDA HAY SUR---!"
 )
 ALV_PIC = Var.ALIVE_PIC if Var.ALIVE_PIC else None
 telemoji = Var.CUSTOM_ALIVE_EMOJI if Var.CUSTOM_ALIVE_EMOJI else "**✵**"
@@ -75,19 +75,19 @@ async def amireallyalive(alive):
         tele += f"{telemoji} **TeleBot Version**: `{telever}`\n"
         tele += f"{telemoji} **More Info**: @TeleBotSupport\n"
         tele += f"{telemoji} **Sudo** : `{sudo}`\n"
-        tele += f"{telemoji} **TeleBot Uptime**: `{uptime}`\n"
+        tele += f"{telemoji} **Macy Uptime**: `{uptime}`\n"
         tele += f"{telemoji} **Database Status**: `All OK 👌!`\n"
         tele += (
             f"{telemoji} **My pro owner** : [{DEFAULTUSER}](tg://user?id={myid})\n\n"
         )
-        tele += "    [✨ GitHub Repository ✨](https://github.com/xditya/TeleBot)"
+        tele += "    [≧ω≦ GitHub Repository ≧ω≦](https://github.com/alexhacker-blip/MACY)"
         await alive.get_chat()
         await alive.delete()
         """ For .alive command, check if the bot is running.  """
         await borg.send_file(alive.chat_id, ALV_PIC, caption=tele, link_preview=False)
         await alive.delete()
         return
-    req = requests.get("https://telegra.ph/file/0670190de8e3bddea6d95.png")
+    req = requests.get("https://telegra.ph/file/06b32d829f757531eacb3.jpg")
     req.raise_for_status()
     file = BytesIO(req.content)
     file.seek(0)
@@ -98,16 +98,16 @@ async def amireallyalive(alive):
         sticker.seek(0)
         await borg.send_message(
             alive.chat_id,
-            f"**Welcome To TeleBot **\n\n"
+            f"**Welcome To Macy **\n\n"
             f"`{CUSTOM_ALIVE}`\n\n"
-            f"{telemoji} **Telethon version**: `1.17`\n{telemoji} **Python**: `3.8.3`\n"
-            f"{telemoji} **TeleBot Version**: `{telever}`\n"
-            f"{telemoji} **More Info**: @TeleBotSupport\n"
+            f"{telemoji} **Telethon version**: `1.19`\n{telemoji} **Python**: `3.8.3`\n"
+            f"{telemoji} **Macy Version**: `{telever}`\n"
+            f"{telemoji} **More Info**: @macy_support\n"
             f"{telemoji} **Sudo** : `{sudo}`\n"
-            f"{telemoji} **TeleBot Uptime**: `{uptime}`\n"
+            f"{telemoji} **MACY Uptime**: `{uptime}`\n"
             f"{telemoji} **Database Status**: `All OK 👌!`\n"
             f"{telemoji} **My pro owner** : [{DEFAULTUSER}](tg://user?id={myid})\n\n"
-            "    [✨ GitHub Repository ✨](https://github.com/xditya/TeleBot)",
+            "    [<~_^> GitHub Repository <~_^>](https://github.com/alexhacker-blip/MACY)",
             link_preview=False,
         )
         await borg.send_file(alive.chat_id, file=sticker)
