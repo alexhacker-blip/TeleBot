@@ -79,8 +79,8 @@ async def amireallyalive(alive):
         tele += f"{telemoji} **Database Status**: `All OK 👌!`\n"
         tele += (
             f"{telemoji} **My pro owner** : [{DEFAULTUSER}](tg://user?id={myid})\n\n"
-        )
-        tele += "    [✨ GitHub Repository ✨](https://github.com/xditya/TeleBot)"
+        
+    
         await alive.get_chat()
         await alive.delete()
         """ For .alive command, check if the bot is running.  """
